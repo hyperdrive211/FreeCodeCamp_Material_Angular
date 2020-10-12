@@ -6,3 +6,12 @@
 button {
     margin: 10px 15px;
 }
+
+.notification-container {
+    width: 80%;
+    margin: auto;
+}
+
+.notifications {
+    margin: 30px 0
+}
