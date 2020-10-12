@@ -1,54 +1,14 @@
-<div class="btn-container">
-    <mat-button-toggle checked #toggleBtn>Toggle</mat-button-toggle>
-    {{toggleBtn.checked}}
-</div>
-
-<div class="btn-container">
-    <mat-button-toggle-group #toggleGroup="matButtonToggleGroup" multiple>
-        <mat-button-toggle value="angular">Angular</mat-button-toggle>
-        <mat-button-toggle value="react">React</mat-button-toggle>
-        <mat-button-toggle value="vue">Vue</mat-button-toggle>
-    </mat-button-toggle-group>
-    {{toggleGroup.value}}
-</div>
-
-<div class="btn-containwr">
-    <mat-icon color="primary">grade</mat-icon>
-</div>
-
-
-<div class="notification-container">
-    <div class="notifications">
-        <span [matBadge]="notifications" [matBadgeHidden]="notifications == 0">Notifications</span>
+<mat-toolbar color="primary" class="navbar">
+    <div>Code Evolution</div>
+    <div>
+        <span>Home</span>
+        <span>About</span>
+        <span>Contact</span>
     </div>
+</mat-toolbar>
 
-    <div class="notifications">
-        <span matBadge="5" matBadgePosition="below before">Notifications</span>
-    </div>
-
-    <div class="notifications">
-        <span matBadge="5" matBadgePosition="above before">Notifications</span>
-    </div>
-
-    <div class="notifications">
-        <span matBadge="5" matBadgePosition="below after">Notifications</span>
-    </div>
-</div>
-
-<div class="notification-container">
-    <div class="notifications">
-        <span matBadge="5">Notifications</span>
-    </div>
-
-    <div class="notifications">
-        <span matBadge="5" matBadgeColor="accent" matBadgePosition="below before" matBadgeSize="small">Notifications</span>
-    </div>
-
-    <div class="notifications">
-        <span matBadge="5" matBadgePosition="above before" matBadgeColor="warn" matBadgeSize="large">Notifications</span>
-    </div>
-
-    <div class="notifications">
-        <span matBadge="5" matBadgePosition="below after" matBadgeSize="medium">Notifications</span>
-    </div>
+<div class="container">
+    <mat-progress-spinner value="40"></mat-progress-spinner>
+    <mat-spinner *ngIf="showSpinner"></mat-spinner>
+    <button mat-button (click)="loadData()">Load Data</button>
 </div>
