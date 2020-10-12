@@ -1,29 +1,13 @@
 <div class="btn-container">
-    <button mat-raised-button>Hello World</button>
-    <h4>Here is our buttons</h4>
-    <button mat-button>Click Me!</button>
-    <button mat-raised-button>Raised button</button>
-    <button mat-flat-button>Flat Button</button>
-    <button mat-stroked-button>Stroked Button!</button>
+    <mat-button-toggle checked #toggleBtn>Toggle</mat-button-toggle>
+    {{toggleBtn.checked}}
 </div>
 
 <div class="btn-container">
-    <button mat-icon-button>Icon</button>
-    <button mat-fab>Fab</button>
-    <button mat-mini-fab>Mini Fab</button>
-</div>
-
-<div class="btn-container">
-    <h4>Different color buttons</h4>
-    <button mat-button>Mat Button Click Me!</button>
-    <button mat-button color="primary">Primary</button>
-    <button mat-button color="accent">Accent</button>
-    <button mat-button color="warm">Warm</button>
-</div>
-<div class="btn-container">
-    <h4>Different color buttons but raised</h4>
-    <button mat-raised-button>Mat Button Click Me!</button>
-    <button mat-raised-button color="primary">Primary</button>
-    <button mat-raised-button color="accent">Accent</button>
-    <button mat-raised-button color="warm">Warm</button>
+    <mat-button-toggle-group #toggleGroup="matButtonToggleGroup" multiple>
+        <mat-button-toggle value="angular">Angular</mat-button-toggle>
+        <mat-button-toggle value="react">React</mat-button-toggle>
+        <mat-button-toggle value="vue">Vue</mat-button-toggle>
+    </mat-button-toggle-group>
+    {{toggleGroup.value}}
 </div>
