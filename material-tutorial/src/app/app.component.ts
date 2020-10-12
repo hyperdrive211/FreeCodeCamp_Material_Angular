@@ -9,11 +9,9 @@ export class AppComponent {
   title = "material-tutorial";
   notifications = 0;
   showSpinner = false;
+  opened = false;
 
-  loadData = () => {
-    this.showSpinner = true;
-    setTimeout(() => {
-      this.showSpinner = false;
-    }, 5000);
+  log = (state) => {
+    console.log(state);
   };
 }

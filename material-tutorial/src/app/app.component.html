@@ -1,14 +1,7 @@
-<mat-toolbar color="primary" class="navbar">
-    <div>Code Evolution</div>
-    <div>
-        <span>Home</span>
-        <span>About</span>
-        <span>Contact</span>
-    </div>
-</mat-toolbar>
+<mat-sidenav-container>
+    <mat-sidenav #sidenav mode="side" [(opened)]="opened">Sidenav</mat-sidenav>
+    <mat-sidenav-content>Main
+        <button (click)="sidenav.toggle()">Toggle Button</button>
+    </mat-sidenav-content>
 
-<div class="container">
-    <mat-progress-spinner value="40"></mat-progress-spinner>
-    <mat-spinner *ngIf="showSpinner"></mat-spinner>
-    <button mat-button (click)="loadData()">Load Data</button>
-</div>
+</mat-sidenav-container>
