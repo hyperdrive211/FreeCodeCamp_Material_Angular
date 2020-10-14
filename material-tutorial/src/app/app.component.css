@@ -1,6 +1,6 @@
 .container {
     width: 70%;
-    margin: 20px auto;
+    margin: 300px auto;
 }
 
 .navbar {
@@ -23,4 +23,8 @@ mat-sidenav-content {
 mat-sidenav {
     background-color: lightcoral;
     width: 200px;
+}
+
+.newColor {
+    background-color: lightcoral;
 }

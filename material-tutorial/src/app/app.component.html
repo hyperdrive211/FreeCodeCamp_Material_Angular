@@ -1,7 +1,28 @@
-<mat-sidenav-container>
-    <mat-sidenav #sidenav mode="side" [(opened)]="opened">Sidenav</mat-sidenav>
-    <mat-sidenav-content>Main
-        <button (click)="sidenav.toggle()">Toggle Button</button>
-    </mat-sidenav-content>
+<div class="container">
+    <mat-menu #appMenu="matMenu" xPosition="after" yPosition="above">
+        <button mat-menu-item [matMenuTriggerFor]="submenu"> Front End </button>
+        <button mat-menu-item> Back End</button>
+    </mat-menu>
 
-</mat-sidenav-container>
+    <button mat-flat-button [matMenuTriggerFor]="appMenu" class="newColor">Menu</button>
+
+    <mat-menu #submenu="matMenu">
+        <button mat-menu-item>Angluar</button>
+        <button mat-menu-item>React</button>
+        <button mat-menu-item>Vue</button>
+    </mat-menu>
+</div>
+
+<div class="container">
+    <mat-menu #lazyMenu="matMenu">
+        <ng-template matMenuContent let-name="name" let-hobbie="hobbie">
+            <button mat-menu-item>Settings</button>
+            <button mat-menu-item>{{hobbie}}</button>
+            <button mat-menu-item>Logout {{name}}</button>
+        </ng-template>
+    </mat-menu>
+
+
+    <button mat-raised-button [matMenuTriggerData]="{name: 'Johnny', hobbie:'martial arts'}" [matMenuTriggerFor]="lazyMenu">Johnny</button>
+    <button mat-raised-button [matMenuTriggerData]="{name: 'CodeEvolution', hobbie:'football'}" [matMenuTriggerFor]="lazyMenu">CodeEvolution</button>
+</div>
