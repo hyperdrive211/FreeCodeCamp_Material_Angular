@@ -5,3 +5,8 @@
 mat-grid-tile {
     background-color: lightyellow;
 }
+
+.container {
+    width: 90%;
+    margin: 40px auto;
+}
