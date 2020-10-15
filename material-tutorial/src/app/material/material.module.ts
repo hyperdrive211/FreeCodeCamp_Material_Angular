@@ -9,6 +9,8 @@ import {
   MatMenuModule,
   MatListModule,
   MatGridListModule,
+  MatExpansionModule,
+  MatCardModule,
 } from "@angular/material";
 import { MatBadgeModule } from "@angular/material/badge";
 
@@ -23,6 +25,8 @@ const MaterialComponents = [
   MatMenuModule,
   MatListModule,
   MatGridListModule,
+  MatExpansionModule,
+  MatCardModule,
 ];
 
 @NgModule({

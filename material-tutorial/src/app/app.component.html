@@ -1,6 +1,29 @@
-<mat-grid-list cols="2" rowHeight="2:1">
-    <mat-grid-tile>Tile 1</mat-grid-tile>
-    <mat-grid-tile>Tile 2</mat-grid-tile>
-    <mat-grid-tile>Tile 3</mat-grid-tile>
-    <mat-grid-tile>Tile 4</mat-grid-tile>
-</mat-grid-list>
+<mat-accordion>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title> Angular Fundamentals </mat-panel-title>
+            <mat-panel-description>Duration 3 hours</mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>This is a description for our angular course.</p>
+        <mat-action-row>
+            <button mat-button>Enroll</button>
+        </mat-action-row>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>React Fundamentals</mat-panel-title>
+            <mat-panel-description>Duration: 3 hours</mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>This is the description for our React course</p>
+        <mat-action-row>
+            <button mat-button>Enroll</button>
+        </mat-action-row>
+    </mat-expansion-panel>
+</mat-accordion>
+<mat-card>
+    <mat-card-title>Card Title</mat-card-title>
+    <mat-card-content> Basic Card </mat-card-content>
+    <mat-card-actions align="right">
+        <button mat-button>Login</button>
+    </mat-card-actions>
+</mat-card>
