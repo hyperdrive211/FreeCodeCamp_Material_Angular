@@ -15,6 +15,7 @@ import {
   MatStepperModule,
   MatFormFieldModule,
   MatInputModule,
+  MatSelectModule,
 } from "@angular/material";
 import { MatBadgeModule } from "@angular/material/badge";
 
@@ -35,6 +36,7 @@ const MaterialComponents = [
   MatStepperModule,
   MatFormFieldModule,
   MatInputModule,
+  MatSelectModule,
 ];
 
 @NgModule({

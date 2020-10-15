@@ -9,4 +9,5 @@ mat-grid-tile {
 .container {
     width: 90%;
     margin: 40px auto;
+    padding: 5px;
 }

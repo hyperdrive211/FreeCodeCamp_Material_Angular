@@ -1,44 +1,40 @@
-<mat-tab-group #tabRef>
-    <mat-tab label="Angular">Angular </mat-tab>
-    <mat-tab label="React">React</mat-tab>
-    <mat-tab label="Vue">Vue</mat-tab>
-</mat-tab-group>
-
 <div class="container">
-    <mat-horizontal-stepper linear>
-        <mat-step label="Shipping Address" completed="false">
-            <p>Here is our display for our expecected shipping address</p>
-            <div>
-                <button mat-raised-button color="primary" matStepperNext>Next</button>
-            </div>
-        </mat-step>
-        <mat-step label="Customer Details" completed="false">
-            <p>Here is where we would be expected to enter customer details</p>
-            <div>
-                <button mat-raised-button matStepperPrevious color="primary">
-          Back
-        </button>
-                <button mat-raised-button color="primary" matStepperNext>Next</button>
-            </div>
-        </mat-step>
-        <mat-step label="Finalize Order" completed="false">
-            <p>Here we are expected to finalize the order</p>
-            <div>
-                <button mat-raised-button color="primary" matStepperPrevious>
-          Back
-        </button>
-            </div>
-        </mat-step>
-    </mat-horizontal-stepper>
-    <mat-vertical-stepper linear>
-        <mat-step label="Step One">
-            <p>here is where we perfrom step one</p>
-        </mat-step>
-        <mat-step label="Step Two">
-            <p>here is where we perfrom step two</p>
-        </mat-step>
-        <mat-step label="Step Three">
-            <p>here is where we perfrom step three</p>
-        </mat-step>
-    </mat-vertical-stepper>
+    <mat-form-field appearance="fill">
+        <mat-label>Input</mat-label>
+        <input type="text" name="myInput" id="myInput" matInput required />
+        <mat-hint align="end">Max five chars</mat-hint>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Input</mat-label>
+        <input type="text" name="myInput" id="myInput" matInput required />
+        <mat-hint align="end">Max five chars</mat-hint>
+    </mat-form-field>
+</div>
+<div class="container">
+    <mat-form-field appearance="outline">
+        <mat-label>Topic</mat-label>
+        <mat-select [(value)]="selectedValue">
+            <mat-option value="angular">Angular</mat-option>
+            <mat-option value="react">React</mat-option>
+            <mat-option value="vue">Vue</mat-option>
+        </mat-select>
+    </mat-form-field>
+    {{ selectedValue }}
+</div>
+<div class="container">
+    <mat-form-field appearance="outline">
+        <mat-label> Topic </mat-label>
+        <mat-select multiple [(value)]="selectedValue1">
+            <mat-optgroup label="Web">
+                <mat-option value="angular"> Angular </mat-option>
+                <mat-option value="react">React</mat-option>
+                <mat-option value="vue">Vue</mat-option>
+            </mat-optgroup>
+            <mat-optgroup label="mobile">
+                <mat-option value="ionic">Ionic</mat-option>
+                <mat-option value="react-native">React Native</mat-option>
+            </mat-optgroup>
+        </mat-select>
+    </mat-form-field>
+    {{ selectedValue1 }}
 </div>

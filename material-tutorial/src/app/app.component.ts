@@ -6,12 +6,6 @@ import { Component } from "@angular/core";
   styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
-  title = "material-tutorial";
-  notifications = 0;
-  showSpinner = false;
-  opened = false;
-
-  log = (state) => {
-    console.log(state);
-  };
+  selectedValue: String = "";
+  selectedValue1: String;
 }
